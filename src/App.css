@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #f0f2f5;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 350px;
+  width: 100%;
+}
+
+.app-title {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.dice-wrapper {
+  margin: 20px auto;
+  width: 150px;
+  height: 150px;
+  transition: transform 0.3s ease;
+}
+
+/* Анимация вращения при клике */
+.dice-wrapper.rolling {
+  transform: rotate(360px) scale(0.8);
+}
+
+.dice-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.result-text {
+  font-size: 18px;
+  color: #555;
+  margin: 20px 0;
+}
+
+.roll-button {
+  background-color: #4f46e5;
   color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.roll-button:hover {
+  background-color: #4338ca;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.roll-button:active {
+  transform: scale(0.98);
+}
+
+.roll-button:disabled {
+  background-color: #a5b4fc;
+  cursor: not-allowed;
 }
