@@ -1,0 +1,16 @@
+.diceWrapper {
+  margin: 20px auto;
+  width: 150px;
+  height: 150px;
+  transition: transform 0.3s ease;
+}
+
+.diceWrapper.rolling {
+  transform: rotate(360deg) scale(0.8); /* Исправил ошибку: в CSS вращение задается в deg, а не px */
+}
+
+.diceImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

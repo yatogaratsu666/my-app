@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Dice from './components/dice';
+import Dice from './components/dice/dice'; 
 import './App.css';
 
 function App() {
@@ -19,15 +19,13 @@ function App() {
   return (
     <div className="app-container">
       <h1 className="app-title">Игральная кость</h1>
-      
-      <div className={`dice-wrapper ${isRolling ? 'rolling' : ''}`}>
-        <Dice value={diceValue} />
-      </div>
+
+      <Dice value={diceValue} isRolling={isRolling} />
 
       <p className="result-text">Выпало число: <strong>{diceValue}</strong></p>
 
-      <button 
-        className="roll-button" 
+      <button
+        className="roll-button"
         onClick={rollDice}
         disabled={isRolling}
       >
