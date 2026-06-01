@@ -12,11 +12,11 @@ const diceImages = {
 
 const Dice = ({ value }) => {
   return (
-    <div className={styles['dice-container']}>
+    <div className={styles.diceWrapper}>
       <img 
         src={diceImages[value]} 
         alt={`Кубик с числом ${value}`} 
-        className={styles['dice-image']}
+        className={styles.diceImage}
       />
     </div>
   );

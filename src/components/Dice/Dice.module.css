@@ -6,7 +6,7 @@
 }
 
 .diceWrapper.rolling {
-  transform: rotate(360deg) scale(0.8); /* Исправил ошибку: в CSS вращение задается в deg, а не px */
+  transform: rotate(360deg) scale(0.8); 
 }
 
 .diceImage {

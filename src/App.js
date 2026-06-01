@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Dice from './components/dice/dice'; 
+import Dice from './components/Dice/Dice1';
 import './App.css';
 
 function App() {
